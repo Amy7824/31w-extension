@@ -1,1 +1,27 @@
-/*# sourceMappingURL=style.css.map */
+.carrousel {
+  left: 25vw;
+  top: 25vh;
+  width: 50vw;
+  height: 50vh;
+  background-color: aqua;
+  position: absolute;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.carrousel--ouvrir {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.btn_fermer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+}/*# sourceMappingURL=style.css.map */
