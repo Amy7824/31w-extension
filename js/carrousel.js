@@ -44,7 +44,7 @@
     /**
      * Ajoute un radio bouton dans le carrousel
      */
-    function ajouter_radio_carrousel() {
+     function ajouter_radio_carrousel() {
         let elmCarrousel__form__radio = document.createElement('input');
         elmCarrousel__form__radio.setAttribute('name', 'carrousel__form__radio');
         elmCarrousel__form__radio.setAttribute('class', 'carrousel__form__radio');
