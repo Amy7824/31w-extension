@@ -8,6 +8,7 @@
   transform: scale(0);
   opacity: 0;
   transition: transform 1s, opacity 1s;
+  z-index: 1;
 }
 
 .carrousel--ouvrir {
@@ -24,4 +25,35 @@
   top: 0;
   width: 2rem;
   height: 2rem;
+}
+
+.carrousel__figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carrousel__figure__img {
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.carrousel__figure__img--activer {
+  opacity: 1;
+}
+
+.carrousel__form {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }/*# sourceMappingURL=style.css.map */
