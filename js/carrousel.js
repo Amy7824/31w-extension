@@ -24,8 +24,19 @@
     for(const elmImg of elmGalerieImg) {
         //console.log(elmImg.tagName);
         console.log(elmImg.getAttribute("src"));
+        elmImg.dataset.index = index;
+        console.log(elmImg.dataset.index);
         ajouter_img_carrousel(elmImg)
-        ajouter_radio_carrousel()
+        ajouter_radio_carrousel();
+        //écoutuer sur les images de la galerie
+        elmImg.addEventListener("mousedown", function() {
+            console.log('galerie');
+            console.log(this.dataset.index);
+            console.log("elmImg.dataset.index" + this.dataset.index);
+            elmCarrousel.classList.add("carrousel--ouvrir");
+            elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel__figure__img--activer');
+            elmCarrousel__form.children[this.dataset.index].checked.true;
+        });
     }
     /**
      * Ajoute une image dans le carrousel
@@ -33,12 +44,13 @@
      */
 
     function ajouter_img_carrousel(elmImg) {
+       // elmImg.dataset.index = index;
         //elmImg représente une image de la galerie
         let elmCarrousel__figure__img = document.createElement("img");
         elmCarrousel__figure__img.setAttribute('src',elmImg.getAttribute('src'));
         elmCarrousel__figure__img.classList.add("carrousel__figure__img");
         elmCarrousel__figure.appendChild(elmCarrousel__figure__img);
-        elmCarrousel__figure__img.dataset.index = index;
+       
     }
 
     /**
@@ -56,8 +68,14 @@
         /**------écouteur sur radio pour afficher une nouvelle image---- */
         elmCarrousel__form__radio.addEventListener('mousedown', function() {
             console.log(this.dataset.index);
+
+            if(dernierIndex != -1) {
+                elmCarrousel__figure.children[dernierIndex].classList.remove("carrousel__figure__img--activer");
+            }
             
             elmCarrousel__figure.children[this.dataset.index].classList.add('carrousel__figure__img--activer');
+            console.log(index);
+            dernierIndex= this.dataset.index;
         })
     }
 
