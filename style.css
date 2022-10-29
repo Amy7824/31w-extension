@@ -1,8 +1,9 @@
 .carrousel {
   left: 12.5vw;
   top: 12.5vh;
-  width: 20vw;
+  width: 25vw;
   height: 40vh;
+  margin-left: 30vw;
   position: absolute;
   transform: scale(0);
   opacity: 0;
