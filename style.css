@@ -65,6 +65,7 @@
   display: inline-block;
   height: 10px;
   width: 10px;
+  top: 13vh;
   position: relative;
   border-style: solid;
   border-width: 5px 5px 0 0;
