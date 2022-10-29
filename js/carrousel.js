@@ -96,23 +96,29 @@
   });
 
   //fleche gauche
-elmFlecheGauche.addEventListener("click", function () {
-  if(dernierIndex != -1 ) {
-    elmCarrousel__figure.children.length = dernierIndex;
-  }
-  elmCarrousel__figure.children[dernierIndex - 1].classList.add("carrousel__figure__img--activer");
-  elmCarrousel__figure.children[dernierIndex].classList.remove("carrousel__figure__img--activer");
-  elmCarrousel__form.children[dernierIndex - 1].checked = true;
-  dernierIndex--;
-});
+  elmFlecheGauche.addEventListener("click", function () {
+    if (dernierIndex != -1) {
+      elmCarrousel__figure.children.length = dernierIndex;
+    }
+    elmCarrousel__figure.children[dernierIndex - 1].classList.add(
+      "carrousel__figure__img--activer"
+    );
+    elmCarrousel__figure.children[dernierIndex].classList.remove(
+      "carrousel__figure__img--activer"
+    );
+    elmCarrousel__form.children[dernierIndex - 1].checked = true;
+    dernierIndex--;
+  });
 
-// bouton droit
-elmFlecheDroite.addEventListener("click", function () {
- if( dernierIndex != elmCarrousel__figure.children.length - 1) {
-    dernierIndex =  dernierIndex;
-  }
-  elmCarrousel__figure.children[Number(dernierIndex) + 1].classList.add("carrousel__figure__img--activer");
-  elmCarrousel__form.children[Number(dernierIndex) + 1].checked = true;
-  dernierIndex++;
-});
+  // bouton droit
+  elmFlecheDroite.addEventListener("click", function () {
+    if (dernierIndex != elmCarrousel__figure.children.length - 1) {
+      dernierIndex = dernierIndex;
+    }
+    elmCarrousel__figure.children[Number(dernierIndex) + 1].classList.add(
+      "carrousel__figure__img--activer"
+    );
+    elmCarrousel__form.children[Number(dernierIndex) + 1].checked = true;
+    dernierIndex++;
+  });
 })();
