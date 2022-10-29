@@ -1,5 +1,5 @@
 # 31w-extention
 Auteur: Zhile Wu
-Titre : 31W
-Description: Introduction à un gestionnaire de contenue
-https://github.com/Amy7824/31w-extention.git
+Titre : 31W¸-exension
+Description: extension pour carrousel modale
+https://github.com/Amy7824/31w-extension.git
