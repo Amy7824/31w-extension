@@ -1,7 +1,7 @@
 .carrousel {
   left: 12.5vw;
   top: 12.5vh;
-  width: 40vw;
+  width: 20vw;
   height: 40vh;
   position: absolute;
   transform: scale(0);
@@ -48,12 +48,11 @@
 
 .carrousel__form {
   position: absolute;
-  bottom: 0;
+  bottom: -28vh;
   width: 100%;
   z-index: 3;
   display: flex;
   justify-content: center;
-  margin: 1rem;
 }
 
 .btn_modale {
