@@ -4,7 +4,7 @@
  * version 1.0.0
  */
 /*
-Plugin Name: EM_carrousel 
+Plugin Name: ZHILE_carrousel 
 version 1.0.0
 */
 /*
@@ -16,24 +16,24 @@ wp_enqueue_script() // intègre le script dans la page
 wp_enqueue_scripts // le hook
 */
 
-function emc_enqueue() {
+function zhilec_enqueue() {
     $version_css = filemtime(plugin_dir_path(__FILE__)."style.css");
     $version_js = filemtime(plugin_dir_path(__FILE__)."js/carrousel.js");
 
-    wp_enqueue_style("emc_style_carrousel",
+    wp_enqueue_style("zhilec_style_carrousel",
                         plugin_dir_url(__FILE__)."style.css",
                         array(),
                         $version_css,
                         false);
 
-    wp_enqueue_script("emc_js_carrousel",
+    wp_enqueue_script("zhilec_js_carrousel",
     plugin_dir_url(__FILE__)."js/carrousel.js",
     array(),
     $version_js,
     true);
 }
 
-add_action('wp_enqueue_scripts', 'emc_enqueue');
+add_action('wp_enqueue_scripts', 'zhilec_enqueue');
 
 function genere_boite(){
     $contenu = 
@@ -47,10 +47,12 @@ function genere_boite(){
     </style>"*/
     "<button class='btn_modale'>boite modale</button>
     <div class='carrousel'>
+    <div class='fleche fleche__gauche'> </div>
+    <div class='fleche fleche__droite'> </div>
     <button class='btn_fermer'>x</button>
     <figure class='carrousel__figure'></figure>
     <form class='carrousel__form'><form>
     </div>";
     return $contenu;
 }
-add_shortcode('em_carrousel', 'genere_boite');
+add_shortcode('zhile_carrousel', 'genere_boite');

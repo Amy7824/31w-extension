@@ -1,9 +1,8 @@
 .carrousel {
   left: 12.5vw;
   top: 12.5vh;
-  width: 75vw;
-  height: 75vh;
-  background-color: aqua;
+  width: 40vw;
+  height: 40vh;
   position: absolute;
   transform: scale(0);
   opacity: 0;
@@ -38,9 +37,9 @@
   object-fit: cover;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 420px;
+  height: 500px;
   opacity: 0;
-  transition: opacity 1s;
 }
 
 .carrousel__figure__img--activer {
@@ -55,4 +54,45 @@
   display: flex;
   justify-content: center;
   margin: 1rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.btn_modale {
+  display: none;
+}
+
+.fleche::before {
+  content: "";
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  border-style: solid;
+  border-width: 5px 5px 0 0;
+  transform: rotate(-45deg);
+}
+
+.fleche.fleche__droite:before {
+  left: -10px;
+  transform: rotate(45deg);
+}
+
+.fleche.fleche__gauche:before {
+  left: 0.25em;
+  transform: rotate(-135deg);
+}
+
+.fleche.fleche__gauche,
+.fleche.fleche__droite {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  font-size: 40px;
+  color: rgb(219, 218, 202);
+  z-index: 6;
+}
+
+.fleche.fleche__droite {
+  right: 0;
+}
+
+/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
