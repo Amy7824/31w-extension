@@ -25,16 +25,12 @@
   /**--------------------Étape 1 parcourir les images de la galerie */
   for (const elmImg of elmGalerieImg) {
     //console.log(elmImg.tagName);
-    console.log(elmImg.getAttribute("src"));
     elmImg.dataset.index = index;
-    console.log(elmImg.dataset.index);
     ajouter_img_carrousel(elmImg);
     ajouter_radio_carrousel();
     //écoutuer sur les images de la galerie
     elmImg.addEventListener("mousedown", function () {
-      console.log("galerie");
-      console.log(this.dataset.index);
-      console.log("elmImg.dataset.index" + this.dataset.index);
+     
       elmCarrousel.classList.add("carrousel--ouvrir");
       elmCarrousel__figure.children[this.dataset.index].classList.add(
         "carrousel__figure__img--activer"
