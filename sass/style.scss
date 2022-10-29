@@ -41,6 +41,7 @@
   width: 420px;
   height: 500px;
   opacity: 0;
+  transition: opacity .5s;
 }
 
 .carrousel__figure__img--activer {
